@@ -1,0 +1,118 @@
+/* Generated from site.config.json. */
+:root {
+  --brand-primary: #243b34;
+  --brand-secondary: #36454f;
+  --brand-accent: #d2c093;
+  --brand-background: #eee5d6;
+  --brand-surface: #f6f2eb;
+  --brand-text: #243b34;
+  --brand-muted: #73513e;
+  --brand-on-primary: #ffffff;
+  --sar-color-primary: var(--brand-accent);
+  --sar-color-accent: var(--brand-secondary);
+  --sar-color-text: var(--brand-text);
+  --sar-color-background: var(--brand-surface);
+  --sar-color-color-1: #eee5d61a;
+  --sar-color-color-2: #eee5d60f;
+  --sar-color-color-3: #eee5d699;
+  --sar-color-color-4: var(--brand-background);
+  --sar-color-color-5: #243b3414;
+  --sar-color-color-6: #243b34;
+  --sar-color-color-7: #243b3400;
+  --sar-color-color-8: #d2c09340;
+  --sar-color-color-9: #eee5d633;
+  --sar-color-color-10: #eee5d612;
+  --sar-color-color-11: #d2c0931a;
+  --sar-color-color-12: #d2c09333;
+  --sar-color-auto-000000: #243b34;
+  --sar-color-auto-0b0b0b: #243b34;
+  --sar-color-auto-101828: #243b34;
+  --sar-color-auto-2c1a1d: #243b34;
+  --sar-color-auto-333333: #243b34;
+  --sar-color-auto-353a3c: #243b34;
+  --sar-color-auto-444444: #243b34;
+  --sar-color-auto-4d4d4d: #73513e;
+  --sar-color-auto-555555: #73513e;
+  --sar-color-auto-666666: #73513e;
+  --sar-color-auto-6d2c34: #73513e;
+  --sar-color-auto-777777: #73513e;
+  --sar-color-auto-8a2535: #73513e;
+  --sar-color-auto-aaaaaa: #73513e;
+  --sar-color-auto-b18d59: #73513e;
+  --sar-color-auto-c9a46b: #d2c093;
+  --sar-color-auto-d8c6a4: #d2c093;
+  --sar-color-auto-e5e7eb: #f6f2eb;
+  --sar-color-auto-f0ebe0: #f6f2eb;
+  --sar-color-auto-f0ebe3: #f6f2eb;
+  --sar-color-auto-f5f0e8: #f6f2eb;
+  --sar-color-auto-f5f2ec: #f6f2eb;
+  --sar-color-auto-faf7f2: #eee5d6;
+  --sar-color-auto-ff6568: #d2c093;
+  --sar-color-auto-fff7eb: #eee5d6;
+  --sar-font-body: Lato, sans-serif;
+  --sar-font-heading: EB Garamond, serif;
+  --sar-font-font-1: Lato, sans-serif;
+  --sar-font-font-2: Lato, sans-serif;
+  --sar-font-font-3: var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  --sar-font-font-4: Lato, sans-serif;
+}
+
+/* The logo is supplied on cream paper. Screen blending drops the paper tone. */
+.chambers-logo {
+  position: relative;
+  display: block;
+  width: 86px;
+  height: 69px;
+  overflow: hidden;
+}
+
+button:has(> .chambers-logo),
+a:has(> .chambers-logo) {
+  mix-blend-mode: screen;
+}
+
+.chambers-logo img {
+  position: absolute;
+  top: -14px;
+  left: -46px;
+  width: 178px;
+  max-width: none;
+  height: auto;
+  filter: grayscale(1) invert(1) contrast(1.75) sepia(0.45);
+}
+
+.hero-engraving {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: min(33vw, 470px);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-engraving img {
+  position: absolute;
+  right: -12%;
+  bottom: 0;
+  width: auto;
+  max-width: none;
+  height: min(97%, 44vw, 78svh);
+}
+
+.advocate-portrait {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center 22%;
+}
+
+@media (max-width: 767px) {
+  .hero-engraving {
+    width: min(62vw, 300px);
+    opacity: 0.28;
+  }
+
+  .hero-engraving img {
+    height: min(58%, 90vw);
+  }
+}
