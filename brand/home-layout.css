@@ -695,7 +695,6 @@ header[data-sar-type="navigation"] {
 
 #site-navigation .mobile-nav-appointment { display: none; }
 
-.home-header > a:first-child { mix-blend-mode: screen; }
 .practice-panel { padding: 0 clamp(16px, 4vw, 36px) 24px; }
 .practice-panel a { display: inline-block; margin-top: 8px; text-decoration: underline; }
 .appointment-dialog button:disabled,

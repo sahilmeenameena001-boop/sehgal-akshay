@@ -57,18 +57,13 @@
   --sar-font-font-4: Lato, sans-serif;
 }
 
-/* The logo is supplied on cream paper. Screen blending drops the paper tone. */
+/* The logo filter turns the cream paper transparent and preserves the mark. */
 .chambers-logo {
   position: relative;
   display: block;
   width: 86px;
   height: 69px;
   overflow: hidden;
-}
-
-button:has(> .chambers-logo),
-a:has(> .chambers-logo) {
-  mix-blend-mode: screen;
 }
 
 .chambers-logo img {
@@ -78,7 +73,7 @@ a:has(> .chambers-logo) {
   width: 178px;
   max-width: none;
   height: auto;
-  filter: grayscale(1) invert(1) contrast(1.75) sepia(0.45);
+  filter: url("#chambers-logo-ink");
 }
 
 .hero-engraving {
