@@ -250,8 +250,7 @@ details[open] > summary .disclosure-sign::before { content: "−"; }
 .appointment-submit {
   padding: 12px;
   background: var(--brand-accent);
-  color: var(--sar-color-color-4);
-  opacity: .75;
+  color: var(--brand-text);
 }
 
 @media (max-width: 767px) {
@@ -611,8 +610,6 @@ header[data-sar-type="navigation"] {
   #hero {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: 100dvh;
   }
 
   .home-hero-layout {
@@ -641,14 +638,14 @@ header[data-sar-type="navigation"] {
 @media (max-width: 767px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape) {
   .home-header.has-mobile-nav,
   header.has-mobile-nav[data-sar-type="navigation"] > div {
-    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 
   .has-mobile-nav .mobile-nav-toggle {
     display: grid;
     place-content: center;
     gap: 4px;
-    grid-area: 1 / 3;
+    grid-area: 1 / 2;
     width: 44px;
     height: 44px;
     color: var(--sar-color-color-4);
@@ -670,29 +667,33 @@ header[data-sar-type="navigation"] {
   .has-mobile-nav.mobile-nav-open #site-navigation {
     display: flex !important;
     grid-area: 2 / 1 / 3 / -1;
-    justify-content: flex-end;
-    justify-self: end;
-    flex-wrap: wrap;
-  }
-}
-
-#site-navigation .mobile-nav-appointment { display: none; }
-
-@media (max-width: 767px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape) {
-  .home-header.has-mobile-nav,
-  header.has-mobile-nav[data-sar-type="navigation"] > div {
-    grid-template-columns: minmax(0, 1fr) auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-block: 4px 8px;
+    border-top: 1px solid var(--sar-color-color-9);
   }
 
-  .has-mobile-nav .mobile-nav-toggle { grid-area: 1 / 2; }
+  .has-mobile-nav #site-navigation > a:not(.appointment-trigger) {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding-inline: 12px;
+  }
+
   .has-mobile-nav .desktop-nav-appointment { display: none; }
 
   .has-mobile-nav.mobile-nav-open #site-navigation .mobile-nav-appointment {
     display: inline-flex;
     align-items: center;
+    align-self: flex-start;
     min-height: 44px;
+    margin-top: 8px;
+    padding-inline: 16px;
   }
 }
+
+#site-navigation .mobile-nav-appointment { display: none; }
 
 .home-header > a:first-child { mix-blend-mode: screen; }
 .practice-panel { padding: 0 clamp(16px, 4vw, 36px) 24px; }
@@ -735,18 +736,6 @@ header[data-sar-type="navigation"] {
 .inner-page-content ul { list-style: disc; padding-inline-start: 1.25rem; margin-block: 1.25rem; }
 .inner-page-content a { text-decoration: underline; }
 .inner-page-footer { background: var(--brand-primary); color: var(--sar-color-color-4); padding-block: 1.5rem; }
-@media (max-width: 767px) {
-  .home-hero-layout .hero-art {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: min(55%, 280px);
-    opacity: 0.24;
-    z-index: -1;
-    pointer-events: none;
-  }
-}
 
 
 .home-contact {
@@ -856,3 +845,6 @@ body { background: var(--brand-background); color: var(--brand-text); }
 .appointment-trigger:hover, .home-header a.appointment-trigger:hover, .appointment-submit:hover {
   background: var(--brand-background);
 }
+
+.palette-readable-light { color: var(--brand-surface); }
+.enquiry-form input::placeholder { color: var(--brand-muted); opacity: 1; }
